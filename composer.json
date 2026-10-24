@@ -1,0 +1,41 @@
+{
+    "name": "tenryuubito/wiz-monitor-client",
+    "description": "Collects errors, security and health data of a TYPO3 installation and exposes them to a Wiz Monitor instance through an HMAC-signed endpoint",
+    "type": "typo3-cms-extension",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "typo3",
+        "typo3-extension",
+        "monitoring",
+        "error-tracking",
+        "security"
+    ],
+    "homepage": "https://github.com/Tenryuubito/wiz-monitor-client",
+    "support": {
+        "issues": "https://github.com/Tenryuubito/wiz-monitor-client/issues",
+        "source": "https://github.com/Tenryuubito/wiz-monitor-client"
+    },
+    "require": {
+        "php": "^8.2",
+        "composer-runtime-api": "^2.2",
+        "typo3/cms-core": "^14.0",
+        "typo3/cms-frontend": "^14.0"
+    },
+    "suggest": {
+        "typo3/cms-scheduler": "Reports disabled, overdue and failed scheduler tasks",
+        "typo3/cms-install": "Reports an existing ENABLE_INSTALL_TOOL file"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tenryuubito\\WizMonitorClient\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "wiz_monitor_client"
+        },
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        }
+    }
+}
